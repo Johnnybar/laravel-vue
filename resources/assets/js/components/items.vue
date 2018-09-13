@@ -1,10 +1,10 @@
 
 <script>
 export default {
-  name:'items',
-  props:['items'],
+  name: 'items',
+  props: ['items'],
   data() {
-    return{
+    return {
       loggedIn: ''
     }
   },
@@ -20,18 +20,17 @@ export default {
   </div>
   </div>
   `,
-  mounted(){
+  mounted() {
     // console.log('this is session',this.$session.getAll());
     let userDetails = this.$session.getAll().user;
-    if(userDetails === undefined) {
+    if (userDetails === undefined) {
       this.loggedIn = false;
       console.log('no user', this.loggedIn);
+    } else {
+      this.user = userDetails;
+      this.loggedIn = true;
+      console.log('yes user', this.user);
     }
-    else{
-    this.user = userDetails;
-    this.loggedIn = true;
-    console.log('yes user', this.user);
-   }
   }
   // data() {
   //   return{

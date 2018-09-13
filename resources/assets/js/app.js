@@ -1,18 +1,18 @@
 /**
-* First we will load all of this project's JavaScript dependencies which
-* includes Vue and other libraries. It is a great starting point when
-* building robust, powerful web applications using Vue and Laravel.
-*/
+ * First we will load all of this project's JavaScript dependencies which
+ * includes Vue and other libraries. It is a great starting point when
+ * building robust, powerful web applications using Vue and Laravel.
+ */
 
 require('./bootstrap');
 
 window.Vue = require('vue');
 
 /**
-* Next, we will create a fresh Vue application instance and attach it to
-* the page. Then, you may begin adding components to this application
-* or customize the JavaScript scaffolding to fit your unique needs.
-*/
+ * Next, we will create a fresh Vue application instance and attach it to
+ * the page. Then, you may begin adding components to this application
+ * or customize the JavaScript scaffolding to fit your unique needs.
+ */
 
 Vue.component(
   'posts-component',
@@ -47,32 +47,32 @@ const app = new Vue({
   el: '#app',
   data: {
     posts: [{
-      id: 1,
-      title: 'My journey with Vue'
-    },
-    {
-      id: 2,
-      title: 'Blogging with Vue'
-    },
-    {
-      id: 3,
-      title: 'Why Vue is so fun'
-    }
-  ],
-  items: [{
-    id: 1,
-    title: 'First item'
-  },
-  {
-    id: 2,
-    title: 'Second item'
-  },
-  {
-    id: 3,
-    title: 'Third item'
+        id: 1,
+        title: 'My journey with Vue'
+      },
+      {
+        id: 2,
+        title: 'Blogging with Vue'
+      },
+      {
+        id: 3,
+        title: 'Why Vue is so fun'
+      }
+    ],
+    items: [{
+        id: 1,
+        title: 'First item'
+      },
+      {
+        id: 2,
+        title: 'Second item'
+      },
+      {
+        id: 3,
+        title: 'Third item'
+      }
+    ],
+    username: ''
   }
-],
-username:''
-}
 
 });

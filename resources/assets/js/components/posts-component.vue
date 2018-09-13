@@ -4,10 +4,10 @@ import axios from 'axios';
 import VueSession from 'vue-session'
 Vue.use(VueSession)
 
-    export default {
-      name:'posts-component',
-      props: ['title'],
-      template:`
+export default {
+  name: 'posts-component',
+  props: ['title'],
+  template: `
       <div v-if="this.loggedIn === true" class="container">
         <table class="table table-striped mt-4">
       <thead>
@@ -31,31 +31,29 @@ Vue.use(VueSession)
     <h4>{{title}}</h4>
       </div>
       `,
-        data(){
-          return {
-            todos: [],
-            loggedIn: ''
-          }
-      },
-      created(){
-      },
-      mounted(){
-
-        // console.log('this is session',this.$session.getAll());
-        axios.get('https://jsonplaceholder.typicode.com/todos').then(todos=>{
-          this.todos = todos.data.splice(0, 10)
-        })
-        let userDetails = this.$session.getAll().user;
-        if(userDetails === undefined) {
-          this.loggedIn = false;
-          console.log('no user', this.loggedIn);
-          window.location = '/';
-        }
-        else{
-        this.user = userDetails;
-        this.loggedIn = true;
-        console.log('yes user', this.user);
-       }
-      }
+  data() {
+    return {
+      todos: [],
+      loggedIn: ''
     }
+  },
+  created() {},
+  mounted() {
+
+    // console.log('this is session',this.$session.getAll());
+    axios.get('https://jsonplaceholder.typicode.com/todos').then(todos => {
+      this.todos = todos.data.splice(0, 10)
+    })
+    let userDetails = this.$session.getAll().user;
+    if (userDetails === undefined) {
+      this.loggedIn = false;
+      console.log('no user', this.loggedIn);
+      window.location = '/';
+    } else {
+      this.user = userDetails;
+      this.loggedIn = true;
+      console.log('yes user', this.user);
+    }
+  }
+}
 </script>

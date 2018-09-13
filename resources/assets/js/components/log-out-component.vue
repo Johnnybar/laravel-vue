@@ -5,18 +5,18 @@ import VueSession from 'vue-session'
 Vue.use(VueSession)
 
 export default {
-  name:'log-out-component',
-  template:`
+  name: 'log-out-component',
+  template: `
 
   <a @click.prevent="logOut">Log Out</a>
   `,
-  data(){
-    return{
+  data() {
+    return {
 
     }
   },
-  methods:{
-    logOut(){
+  methods: {
+    logOut() {
       this.$session.destroy();
       window.location = '/';
     }

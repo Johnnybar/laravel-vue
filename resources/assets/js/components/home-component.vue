@@ -4,10 +4,10 @@ import VueSession from 'vue-session'
 Vue.use(VueSession)
 
 export default {
-  name:'home-component',
+  name: 'home-component',
 
-  data(){
-    return{
+  data() {
+    return {
       user: '',
       loggedIn: false,
     }
@@ -18,21 +18,20 @@ export default {
   <span v-if="loggedIn === false">Please register first to access home page</span>
   </div>
   `,
-  created(){
+  created() {
 
   },
-  mounted(){
+  mounted() {
     // console.log('this is session',this.$session.getAll());
     let userDetails = this.$session.getAll().user;
-    if(userDetails === undefined) {
+    if (userDetails === undefined) {
       this.loggedIn = false;
       // console.log('no user', this.loggedIn);
+    } else {
+      this.user = userDetails;
+      this.loggedIn = true;
+      // console.log('yes user', this.user);
     }
-    else{
-    this.user = userDetails;
-    this.loggedIn = true;
-    // console.log('yes user', this.user);
-   }
   },
 
 }

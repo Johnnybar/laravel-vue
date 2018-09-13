@@ -1510,20 +1510,20 @@ module.exports = __webpack_require__(62);
 
 "use strict";
 /**
-* First we will load all of this project's JavaScript dependencies which
-* includes Vue and other libraries. It is a great starting point when
-* building robust, powerful web applications using Vue and Laravel.
-*/
+ * First we will load all of this project's JavaScript dependencies which
+ * includes Vue and other libraries. It is a great starting point when
+ * building robust, powerful web applications using Vue and Laravel.
+ */
 
 __webpack_require__(16);
 
 window.Vue = __webpack_require__(39);
 
 /**
-* Next, we will create a fresh Vue application instance and attach it to
-* the page. Then, you may begin adding components to this application
-* or customize the JavaScript scaffolding to fit your unique needs.
-*/
+ * Next, we will create a fresh Vue application instance and attach it to
+ * the page. Then, you may begin adding components to this application
+ * or customize the JavaScript scaffolding to fit your unique needs.
+ */
 
 Vue.component('posts-component', __webpack_require__(84));
 Vue.component('news-component', __webpack_require__(80));
@@ -43737,7 +43737,7 @@ exports = module.exports = __webpack_require__(3)(false);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -44006,7 +44006,7 @@ exports = module.exports = __webpack_require__(3)(false);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -44151,7 +44151,7 @@ exports = module.exports = __webpack_require__(3)(false);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -44413,7 +44413,7 @@ exports = module.exports = __webpack_require__(3)(false);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -44436,7 +44436,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     };
   },
 
-  template: '\n  <div v-if="this.loggedIn === true" class="container">\n  <div class="row">\n    <div class="col-sm">\n      {{news[0]}}\n    </div>\n    <div class="col-sm">\n    {{news[1]}}\n    </div>\n    <div class="col-sm">\n      {{news[2]}}\n    </div>\n    <div class="col-sm">\n      {{news[3]}}\n    </div>\n    <div class="col-sm">\n      {{news[4]}}\n    </div>\n  </div>\n  <items\n    v-bind:items=\'items\'\n  ></items>\n</div>\n  ',
+  template: '\n  <div v-if="this.loggedIn === true" class="container">\n  <div class="row">\n  <div class="col-sm">\n  {{news[0]}}\n  </div>\n  <div class="col-sm">\n  {{news[1]}}\n  </div>\n  <div class="col-sm">\n  {{news[2]}}\n  </div>\n  <div class="col-sm">\n  {{news[3]}}\n  </div>\n  <div class="col-sm">\n  {{news[4]}}\n  </div>\n  </div>\n  <items\n  v-bind:items=\'items\'\n  ></items>\n  </div>\n  ',
   created: function created() {},
   mounted: function mounted() {
     this.news.push('first', 'second', 'third', 'fourth', 'fifth');

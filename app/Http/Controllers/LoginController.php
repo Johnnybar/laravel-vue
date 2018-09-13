@@ -13,23 +13,21 @@ class LoginController extends Controller
       $inputData = $request->only([ 'username', 'password']);
 
       foreach($origList as $item) {
-
-         if($item['username'] === $inputData['username']){
-
-           if($item['password'] === $inputData['password']){
-             $auth = 'true';
-             return $auth;
-           }
-           else{
-             $auth = 'false';
-             return $auth;
-           }
-         }
-         // else{
-         //   $auth = 'false';
-         //   return $auth;
-         // }
-       };
+        if($item['username'] === $inputData['username']){
+          if($item['password'] === $inputData['password']){
+            $auth = 'true';
+            return $auth;
+          }
+          else{
+            $auth = 'false';
+            return $auth;
+          }
+        }
+        // else{
+        //   $auth = 'false';
+        //   return $auth;
+        // }
+      };
 
     } catch(Exception $e) {
 

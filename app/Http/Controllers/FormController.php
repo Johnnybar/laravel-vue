@@ -15,7 +15,6 @@ class FormController extends Controller
   function append(Request $request) {
     try {
       $origList = Storage::disk('local')->exists('user-details.json') ? json_decode(Storage::disk('local')->get('user-details.json')) : [];
-
       $inputData = $request->only([ 'username', 'password','checkbox']);
 
       array_push($origList,$inputData);

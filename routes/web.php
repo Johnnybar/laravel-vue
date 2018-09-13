@@ -14,19 +14,19 @@
 
 
 Route::get('/', function () {
-    return view('home');
+  return view('home');
 })->name('home');
 Route::get('/register', function () {
   return view('register');
 });
 Route::get('/posts', function () {
-    return view('posts');
+  return view('posts');
 });
 Route::get('/news', function () {
-    return view('news');
+  return view('news');
 });
 Route::get('/login', function () {
-    return view('login');
+  return view('login');
 });
 
 

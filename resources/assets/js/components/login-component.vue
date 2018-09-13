@@ -5,8 +5,8 @@ import VueSession from 'vue-session'
 Vue.use(VueSession)
 
 export default {
-  name:'form-component',
-  template:`
+  name: 'form-component',
+  template: `
   <div>
   <form class="form-inline" @submit.prevent="handleSubmit">
   <label class="sr-only" for="inlineFormInput">Email</label>
@@ -26,27 +26,26 @@ export default {
   <p v-if="this.user.loggedIn === false">Credentials incorrect. Please try again</p>
   </div>
   `,
-  data(){
-    return{
+  data() {
+    return {
       user: {
-        username:'',
+        username: '',
         password: '',
         loggedIn: ''
       }
     }
   },
-  methods:{
-    handleSubmit(){
-      axios.post('/login-data', this.user).then(resp=>{
+  methods: {
+    handleSubmit() {
+      axios.post('/login-data', this.user).then(resp => {
         console.log(resp.data);
-        if(resp.data === true){
+        if (resp.data === true) {
           this.user.loggedIn = true;
-          this.$session.set('user',this.user.username)
+          this.$session.set('user', this.user.username)
           window.location = '/'
-        }
-        else if(resp.data === false){
-          this.user.username='';
-          this.user.password='';
+        } else if (resp.data === false) {
+          this.user.username = '';
+          this.user.password = '';
           this.user.loggedIn = false
         }
       })
