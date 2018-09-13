@@ -1,5 +1,5 @@
 @extends('layouts.layout')
 
 @section('content')
-<news v-bind:items='items'></news>
+<news-component v-bind:items='items'></news-component>
 @endsection

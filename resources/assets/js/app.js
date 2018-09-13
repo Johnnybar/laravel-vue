@@ -15,12 +15,12 @@ window.Vue = require('vue');
 */
 
 Vue.component(
-  'todo',
-  require('./components/todo.vue')
+  'posts-component',
+  require('./components/posts-component.vue')
 );
 Vue.component(
-  'news',
-  require('./components/news.vue')
+  'news-component',
+  require('./components/news-component.vue')
 );
 Vue.component(
   'items',

@@ -1525,8 +1525,8 @@ window.Vue = __webpack_require__(39);
 * or customize the JavaScript scaffolding to fit your unique needs.
 */
 
-Vue.component('todo', __webpack_require__(42));
-Vue.component('news', __webpack_require__(44));
+Vue.component('posts-component', __webpack_require__(84));
+Vue.component('news-component', __webpack_require__(80));
 Vue.component('items', __webpack_require__(50));
 Vue.component('form-component', __webpack_require__(54));
 Vue.component('home-component', __webpack_require__(58));
@@ -43612,180 +43612,11 @@ exports.clearImmediate = (typeof self !== "undefined" && self.clearImmediate) ||
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2), __webpack_require__(8)))
 
 /***/ }),
-/* 42 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var disposed = false
-var normalizeComponent = __webpack_require__(1)
-/* script */
-var __vue_script__ = __webpack_require__(43)
-/* template */
-var __vue_template__ = null
-/* template functional */
-var __vue_template_functional__ = false
-/* styles */
-var __vue_styles__ = null
-/* scopeId */
-var __vue_scopeId__ = null
-/* moduleIdentifier (server only) */
-var __vue_module_identifier__ = null
-var Component = normalizeComponent(
-  __vue_script__,
-  __vue_template__,
-  __vue_template_functional__,
-  __vue_styles__,
-  __vue_scopeId__,
-  __vue_module_identifier__
-)
-Component.options.__file = "resources/assets/js/components/todo.vue"
-
-/* hot reload */
-if (false) {(function () {
-  var hotAPI = require("vue-hot-reload-api")
-  hotAPI.install(require("vue"), false)
-  if (!hotAPI.compatible) return
-  module.hot.accept()
-  if (!module.hot.data) {
-    hotAPI.createRecord("data-v-cf3ddc46", Component.options)
-  } else {
-    hotAPI.reload("data-v-cf3ddc46", Component.options)
-  }
-  module.hot.dispose(function (data) {
-    disposed = true
-  })
-})()}
-
-module.exports = Component.exports
-
-
-/***/ }),
-/* 43 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_axios__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_axios___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_axios__);
-//
-//
-//
-//
-
-
-
-/* harmony default export */ __webpack_exports__["default"] = ({
-  name: 'todo',
-  props: ['title'],
-  template: '\n      <div class="container">\n        <table class="table table-striped mt-4">\n      <thead>\n        <tr>\n          <th scope="col">User Id</th>\n          <th scope="col">Id</th>\n          <th scope="col">Title</th>\n          <th scope="col">Completed </th>\n        </tr>\n      </thead>\n      <tbody>\n        <tr v-for="todo in todos" :key="todo.id">\n          <th scope="row">1</th>\n          <td>{{todo.id}}</td>\n          <td>{{todo.title}}</td>\n          <td>{{todo.completed}}</td>\n        </tr>\n\n      </tbody>\n    </table>\n    <h4>{{title}}</h4>\n      </div>\n      ',
-  data: function data() {
-    return {
-      todos: []
-    };
-  },
-  created: function created() {
-    var _this = this;
-
-    __WEBPACK_IMPORTED_MODULE_0_axios___default.a.get('https://jsonplaceholder.typicode.com/todos').then(function (todos) {
-      _this.todos = todos.data.splice(0, 10);
-    });
-  },
-  mounted: function mounted() {
-    console.log('Component mounted.');
-  }
-});
-
-/***/ }),
-/* 44 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var disposed = false
-function injectStyle (ssrContext) {
-  if (disposed) return
-  __webpack_require__(45)
-}
-var normalizeComponent = __webpack_require__(1)
-/* script */
-var __vue_script__ = __webpack_require__(48)
-/* template */
-var __vue_template__ = __webpack_require__(49)
-/* template functional */
-var __vue_template_functional__ = false
-/* styles */
-var __vue_styles__ = injectStyle
-/* scopeId */
-var __vue_scopeId__ = null
-/* moduleIdentifier (server only) */
-var __vue_module_identifier__ = null
-var Component = normalizeComponent(
-  __vue_script__,
-  __vue_template__,
-  __vue_template_functional__,
-  __vue_styles__,
-  __vue_scopeId__,
-  __vue_module_identifier__
-)
-Component.options.__file = "resources/assets/js/components/news.vue"
-
-/* hot reload */
-if (false) {(function () {
-  var hotAPI = require("vue-hot-reload-api")
-  hotAPI.install(require("vue"), false)
-  if (!hotAPI.compatible) return
-  module.hot.accept()
-  if (!module.hot.data) {
-    hotAPI.createRecord("data-v-38c025ea", Component.options)
-  } else {
-    hotAPI.reload("data-v-38c025ea", Component.options)
-  }
-  module.hot.dispose(function (data) {
-    disposed = true
-  })
-})()}
-
-module.exports = Component.exports
-
-
-/***/ }),
-/* 45 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// style-loader: Adds some css to the DOM by adding a <style> tag
-
-// load the styles
-var content = __webpack_require__(46);
-if(typeof content === 'string') content = [[module.i, content, '']];
-if(content.locals) module.exports = content.locals;
-// add the styles to the DOM
-var update = __webpack_require__(4)("66222224", content, false, {});
-// Hot Module Replacement
-if(false) {
- // When the styles change, update the <style> tags
- if(!content.locals) {
-   module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-38c025ea\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./news.vue", function() {
-     var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-38c025ea\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./news.vue");
-     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-     update(newContent);
-   });
- }
- // When the module is disposed, remove the <style> tags
- module.hot.dispose(function() { update(); });
-}
-
-/***/ }),
-/* 46 */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(3)(false);
-// imports
-
-
-// module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
-
-// exports
-
-
-/***/ }),
+/* 42 */,
+/* 43 */,
+/* 44 */,
+/* 45 */,
+/* 46 */,
 /* 47 */
 /***/ (function(module, exports) {
 
@@ -43819,103 +43650,8 @@ module.exports = function listToStyles (parentId, list) {
 
 
 /***/ }),
-/* 48 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-/* harmony default export */ __webpack_exports__["default"] = ({
-  name: 'news',
-  props: ['items'],
-  data: function data() {
-    return {
-      news: []
-    };
-  },
-  created: function created() {
-    this.news.push('first', 'second', 'third', 'fourth', 'fifth');
-  },
-  mounted: function mounted() {
-    console.log(this.items);
-  }
-});
-
-/***/ }),
-/* 49 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c(
-    "div",
-    { staticClass: "container" },
-    [
-      _c("div", { staticClass: "row" }, [
-        _c("div", { staticClass: "col-sm" }, [
-          _vm._v("\n      " + _vm._s(_vm.news[0]) + "\n    ")
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "col-sm" }, [
-          _vm._v("\n    " + _vm._s(_vm.news[1]) + "\n    ")
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "col-sm" }, [
-          _vm._v("\n      " + _vm._s(_vm.news[2]) + "\n    ")
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "col-sm" }, [
-          _vm._v("\n      " + _vm._s(_vm.news[3]) + "\n    ")
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "col-sm" }, [
-          _vm._v("\n      " + _vm._s(_vm.news[4]) + "\n    ")
-        ])
-      ]),
-      _vm._v(" "),
-      _c("items", { attrs: { items: _vm.items } })
-    ],
-    1
-  )
-}
-var staticRenderFns = []
-render._withStripped = true
-module.exports = { render: render, staticRenderFns: staticRenderFns }
-if (false) {
-  module.hot.accept()
-  if (module.hot.data) {
-    require("vue-hot-reload-api")      .rerender("data-v-38c025ea", module.exports)
-  }
-}
-
-/***/ }),
+/* 48 */,
+/* 49 */,
 /* 50 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -44001,7 +43737,7 @@ exports = module.exports = __webpack_require__(3)(false);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -44017,17 +43753,23 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'items',
   props: ['items'],
-  template: '\n  <div v-if="loggedIn">\n  <div class="item-class" style="border:1px solid black">\n    <h4>this is the items component embedded in the news component,<br/> receiving the items prop from the app component to the news component</h4>\n    <ul>\n    <li v-for="item in items">\n    {{item.title}}\n    </li>\n    </ul>\n  </div>\n  </div>\n  ',
+  data: function data() {
+    return {
+      loggedIn: ''
+    };
+  },
+
+  template: '\n  <div v-if="this.loggedIn === true">\n  <div class="item-class" style="border:1px solid black">\n    <h4>this is the items component embedded in the news component,<br/> receiving the items prop from the app component to the news component</h4>\n    <ul>\n    <li v-for="item in items">\n    {{item.title}}\n    </li>\n    </ul>\n  </div>\n  </div>\n  ',
   mounted: function mounted() {
     // console.log('this is session',this.$session.getAll());
     var userDetails = this.$session.getAll().user;
     if (userDetails === undefined) {
       this.loggedIn = false;
-      // console.log('no user', this.loggedIn);
+      console.log('no user', this.loggedIn);
     } else {
       this.user = userDetails;
       this.loggedIn = true;
-      // console.log('yes user', this.user);
+      console.log('yes user', this.user);
     }
   }
   // data() {
@@ -44580,6 +44322,229 @@ Vue.use(__WEBPACK_IMPORTED_MODULE_1_vue_session___default.a);
     logOut: function logOut() {
       this.$session.destroy();
       window.location = '/';
+    }
+  }
+});
+
+/***/ }),
+/* 80 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+function injectStyle (ssrContext) {
+  if (disposed) return
+  __webpack_require__(81)
+}
+var normalizeComponent = __webpack_require__(1)
+/* script */
+var __vue_script__ = __webpack_require__(83)
+/* template */
+var __vue_template__ = null
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = injectStyle
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources/assets/js/components/news-component.vue"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-7ecf224c", Component.options)
+  } else {
+    hotAPI.reload("data-v-7ecf224c", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 81 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(82);
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var update = __webpack_require__(4)("58c96ab3", content, false, {});
+// Hot Module Replacement
+if(false) {
+ // When the styles change, update the <style> tags
+ if(!content.locals) {
+   module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-7ecf224c\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./news-component.vue", function() {
+     var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-7ecf224c\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./news-component.vue");
+     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+     update(newContent);
+   });
+ }
+ // When the module is disposed, remove the <style> tags
+ module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 82 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(3)(false);
+// imports
+
+
+// module
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+
+// exports
+
+
+/***/ }),
+/* 83 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  name: 'news',
+  props: ['items'],
+  data: function data() {
+    return {
+      news: [],
+      loggedIn: ''
+    };
+  },
+
+  template: '\n  <div v-if="this.loggedIn === true" class="container">\n  <div class="row">\n    <div class="col-sm">\n      {{news[0]}}\n    </div>\n    <div class="col-sm">\n    {{news[1]}}\n    </div>\n    <div class="col-sm">\n      {{news[2]}}\n    </div>\n    <div class="col-sm">\n      {{news[3]}}\n    </div>\n    <div class="col-sm">\n      {{news[4]}}\n    </div>\n  </div>\n  <items\n    v-bind:items=\'items\'\n  ></items>\n</div>\n  ',
+  created: function created() {},
+  mounted: function mounted() {
+    this.news.push('first', 'second', 'third', 'fourth', 'fifth');
+    // console.log('this is session',this.$session.getAll());
+    var userDetails = this.$session.getAll().user;
+    if (userDetails === undefined) {
+      this.loggedIn = false;
+      console.log('no user', this.loggedIn);
+      window.location = '/';
+    } else {
+      this.user = userDetails;
+      this.loggedIn = true;
+      console.log('yes user', this.user);
+    }
+  }
+});
+
+/***/ }),
+/* 84 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+var normalizeComponent = __webpack_require__(1)
+/* script */
+var __vue_script__ = __webpack_require__(85)
+/* template */
+var __vue_template__ = null
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = null
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources/assets/js/components/posts-component.vue"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-d1e84d88", Component.options)
+  } else {
+    hotAPI.reload("data-v-d1e84d88", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 85 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_axios__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_axios___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_axios__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vue_session__ = __webpack_require__(13);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vue_session___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_vue_session__);
+//
+
+
+
+Vue.use(__WEBPACK_IMPORTED_MODULE_1_vue_session___default.a);
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  name: 'posts-component',
+  props: ['title'],
+  template: '\n      <div v-if="this.loggedIn === true" class="container">\n        <table class="table table-striped mt-4">\n      <thead>\n        <tr>\n          <th scope="col">User Id</th>\n          <th scope="col">Id</th>\n          <th scope="col">Title</th>\n          <th scope="col">Completed </th>\n        </tr>\n      </thead>\n      <tbody>\n        <tr v-for="todo in todos" :key="todo.id">\n          <th scope="row">1</th>\n          <td>{{todo.id}}</td>\n          <td>{{todo.title}}</td>\n          <td>{{todo.completed}}</td>\n        </tr>\n\n      </tbody>\n    </table>\n    <h4>{{title}}</h4>\n      </div>\n      ',
+  data: function data() {
+    return {
+      todos: [],
+      loggedIn: ''
+    };
+  },
+  created: function created() {
+    var _this = this;
+
+    __WEBPACK_IMPORTED_MODULE_0_axios___default.a.get('https://jsonplaceholder.typicode.com/todos').then(function (todos) {
+      _this.todos = todos.data.splice(0, 10);
+    });
+  },
+  mounted: function mounted() {
+
+    // console.log('this is session',this.$session.getAll());
+    var userDetails = this.$session.getAll().user;
+    if (userDetails === undefined) {
+      this.loggedIn = false;
+      console.log('no user', this.loggedIn);
+      window.location = '/';
+    } else {
+      this.user = userDetails;
+      this.loggedIn = true;
+      console.log('yes user', this.user);
     }
   }
 });

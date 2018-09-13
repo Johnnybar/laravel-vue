@@ -5,7 +5,7 @@
     <ul>
       <li v-for="post in posts" :key="post.id">@{{post.title}}</li>
     </ul>
-   <todo title="this is a prop title injected"></todo>
+   <posts-component title="this is a prop title injected"></posts-component>
 
 
 @endsection

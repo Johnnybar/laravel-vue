@@ -1,15 +1,14 @@
-<!-- <template>
-
-</template> -->
 
 <script>
 import axios from 'axios';
+import VueSession from 'vue-session'
+Vue.use(VueSession)
 
     export default {
-      name:'todo',
+      name:'posts-component',
       props: ['title'],
       template:`
-      <div class="container">
+      <div v-if="this.loggedIn === true" class="container">
         <table class="table table-striped mt-4">
       <thead>
         <tr>
@@ -34,7 +33,8 @@ import axios from 'axios';
       `,
         data(){
           return {
-            todos: []
+            todos: [],
+            loggedIn: ''
           }
       },
       created(){
@@ -42,8 +42,20 @@ import axios from 'axios';
           this.todos = todos.data.splice(0, 10)
         })
       },
-        mounted() {
-            console.log('Component mounted.')
+      mounted(){
+
+        // console.log('this is session',this.$session.getAll());
+        let userDetails = this.$session.getAll().user;
+        if(userDetails === undefined) {
+          this.loggedIn = false;
+          console.log('no user', this.loggedIn);
+          window.location = '/';
         }
+        else{
+        this.user = userDetails;
+        this.loggedIn = true;
+        console.log('yes user', this.user);
+       }
+      }
     }
 </script>
