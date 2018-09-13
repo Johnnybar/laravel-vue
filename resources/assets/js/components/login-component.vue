@@ -38,6 +38,7 @@ export default {
   methods:{
     handleSubmit(){
       axios.post('/login-data', this.user).then(resp=>{
+        console.log(resp.data);
         if(resp.data === true){
           this.user.loggedIn = true;
           this.$session.set('user',this.user.username)

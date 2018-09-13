@@ -38,13 +38,13 @@ Vue.use(VueSession)
           }
       },
       created(){
-        axios.get('https://jsonplaceholder.typicode.com/todos').then(todos=>{
-          this.todos = todos.data.splice(0, 10)
-        })
       },
       mounted(){
 
         // console.log('this is session',this.$session.getAll());
+        axios.get('https://jsonplaceholder.typicode.com/todos').then(todos=>{
+          this.todos = todos.data.splice(0, 10)
+        })
         let userDetails = this.$session.getAll().user;
         if(userDetails === undefined) {
           this.loggedIn = false;

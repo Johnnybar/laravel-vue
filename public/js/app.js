@@ -44151,7 +44151,7 @@ exports = module.exports = __webpack_require__(3)(false);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -44190,6 +44190,7 @@ Vue.use(__WEBPACK_IMPORTED_MODULE_1_vue_session___default.a);
       var _this = this;
 
       __WEBPACK_IMPORTED_MODULE_0_axios___default.a.post('/login-data', this.user).then(function (resp) {
+        console.log(resp.data);
         if (resp.data === true) {
           _this.user.loggedIn = true;
           _this.$session.set('user', _this.user.username);
@@ -44526,16 +44527,14 @@ Vue.use(__WEBPACK_IMPORTED_MODULE_1_vue_session___default.a);
       loggedIn: ''
     };
   },
-  created: function created() {
+  created: function created() {},
+  mounted: function mounted() {
     var _this = this;
 
+    // console.log('this is session',this.$session.getAll());
     __WEBPACK_IMPORTED_MODULE_0_axios___default.a.get('https://jsonplaceholder.typicode.com/todos').then(function (todos) {
       _this.todos = todos.data.splice(0, 10);
     });
-  },
-  mounted: function mounted() {
-
-    // console.log('this is session',this.$session.getAll());
     var userDetails = this.$session.getAll().user;
     if (userDetails === undefined) {
       this.loggedIn = false;
